@@ -14,6 +14,7 @@ function showPosition(position){
     }
     userMarker = L.marker([position.coords.latitude, position.coords.longitude]).addTo(myMap).bindPopup("<b>You were here</b>");
     myMap.setView([position.coords.latitude, position.coords.longitude], 13);
+	getDistance();
 }
 
 function getDistance(){
