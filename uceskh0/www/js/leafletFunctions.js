@@ -1,5 +1,6 @@
 var client;
 var earthquakelayer;
+var earthquakes;
 
 var testMarkerRed = L.AwesomeMarkers.icon({
     icon: 'play',
@@ -34,6 +35,9 @@ function addPointLinePoly(){
         }).addTo(myMap).bindPopup("I am a polygon.");
 }
 
+function loadEarthquakeData(){
+	getData("earthquakes")
+
 function getEarthquakes(){
     client = new XMLHttpRequest();
     client.open('GET','https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson');
@@ -52,6 +56,7 @@ function earthquakeResponse(){
 //convert received txt to JSON and add to map
 function loadEarthquakelayer(earthquakedata){
     var earthquakejson = JSON.parse(earthquakedata);
+	earthquakes = earthquakejson;
 
     earthquakelayer = L.geoJson(earthquakejson, {
         // create points

@@ -4,7 +4,7 @@ function trackLocation(){
     if(navigator.geolocation){
         navigator.geolocation.watchPosition(showPosition);
     } else {
-        alert("Geolocation is not supported by this browser.");
+        alert("Geospatial location cannot be obtained by this browser.");
     }
 }
 
