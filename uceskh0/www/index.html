@@ -68,6 +68,7 @@ crossorigin=""/>
 		<script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"
 		integrity="sha512-mNqn2Wg7tSToJhvHcqfzLMU6J4mkOImSPTxVZAdo+lcPlk+GhZmYgACEe0x35K7YzW1zJ7XyJV/TT1MrdXvMcA=="
 		crossorigin=""></script>
+		<script src="https://www.w3schools.com/lib/w3.js"></script>
 		<!-- the following links incorporate the Css required for custom icon creation-->
 		<link rel="stylesheet" href="ionicons.min.css">
 		<link rel="stylesheet" href="leaflet.awesome-markers.css">
@@ -141,7 +142,9 @@ crossorigin=""/>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
 	    <div id="mapid" style="width:600px; height:400px;"></div>
-		<div id="ajaxtest" style="width: 1600px; height: 20px;"></div>
+		<div id="ajaxtest" style="width: 1600px; height: 20px;">
+		<div w3-include-html="createForm.html"></div>
+		</div>
         <div class="mdl-grid demo-content">
             <div class="demo-separator mdl-cell--1-col"></div>
             <div id="ucllogo" name="ucllogo">div goes here</div>
@@ -158,6 +161,7 @@ crossorigin=""/>
     <script src="js/userTracking.js"></script>
 	<script src="js/startup.js"></script>
 	<script src="js/untilites.js"></script>
+	<script src="js/uploadData.js"></script>
 	<script> startup();</script>
 	
   </body>
